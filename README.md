@@ -28,3 +28,11 @@ $('.custom-chk').CustomCHK({
     check: "<div class="custom-chk-check"><div class="inner-check"></div></div>"
 });
 ```
+## Change event
+When the state of the checkbox changes, it fires a custom jquery event. You can bind an event handler to your checkbox like this:
+
+```
+$('.custom-chk').on('custom-chk-change', function(e, val){
+    //val = current value
+});
+```
