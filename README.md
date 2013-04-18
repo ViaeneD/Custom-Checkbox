@@ -2,6 +2,12 @@ Custom-Checkbox
 ===============
 
 ## Markup
+Include jQuery and the plugin javascript file.
+```html
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/custom-chk.min.js"></script>
+```
+
 Just a normal HTML checkbox wrapped in a label. So when a user has JavaScript disabled, you'll still have your normal checkbox.
 ```html
 <label>
@@ -43,4 +49,30 @@ Or if you have a lot of checkboxes, delegate those events:
 $('body').on('custom-chk-change', '.custom-chk', function(e, val){
     //val = current value
 });
+```
+## Styling
+The plugin turns your HTML checkbox in a button. If checked, a standard div is inserted inside the button with the class '.custom-chk-check'.
+Style these as you wish, the standard css is this:
+```css
+.custom-chk-btn{
+    border: 1px solid #D7DEDA; 
+    border-radius: 3px;
+    outline: none;
+    width: 28px;
+    height: 28px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    position: relative;
+}
+
+.custom-chk-check{
+    position: absolute;
+    width: 26px;
+    height: 22px;
+    background: url(../img/check.png) no-repeat;
+    border-radius: 3px;
+    top: 0px;
+    left: 3px;
+}
 ```
