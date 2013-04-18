@@ -1,7 +1,8 @@
 Custom-Checkbox
 ===============
 
-Markup
+## Markup
+Just a normal HTML checkbox wrapped in a label. So when a user has JavaScript disabled, you'll still have your normal checkbox.
 ```
 <label>
     <span>My custom checkbox</span>
@@ -9,6 +10,8 @@ Markup
 </label>
 ```
 
+## Usage
+You can intialize
 ```
 $('.custom-chk').CustomCHK();
 ```
