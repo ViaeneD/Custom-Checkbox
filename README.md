@@ -12,7 +12,7 @@ Just a normal HTML checkbox wrapped in a label. So when a user has JavaScript di
 
 ## Usage
 ###Initializing the plugin:
-```
+```javascript
 $('.custom-chk').CustomCHK();
 ```
 
