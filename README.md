@@ -36,3 +36,11 @@ $('.custom-chk').on('custom-chk-change', function(e, val){
     //val = current value
 });
 ```
+Or if you have a lot of checkboxes, delegate those events:
+```
+//put an event handler to a parent container ('body' for example)
+//and delegate the change events for your checkboxes
+$('body').on('custom-chk-change', '.custom-chk', function(e, val){
+    //val = current value
+});
+```
