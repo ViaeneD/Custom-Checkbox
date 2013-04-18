@@ -1,33 +1,10 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
-
-
+//Custom Checkbox jQuery plugin
 ;(function ( $, window, document, undefined ) {
     var pluginName = "CustomCHK",
         defaults = {
             check: '<div class="custom-chk-check"></div>',
-            valueOn: true,
-            valueOff: false
+            valueOn: 1,
+            valueOff: 0
         };
 
     // The actual plugin constructor
@@ -58,7 +35,7 @@
             }
         },
         toggle: function($el, options){
-            if($el.val()=='on'){
+            if($el.val()==options.valueOn){
                 this.turnOff($el, options);
             }else{
                 this.turnOn($el, options);
@@ -75,8 +52,6 @@
         }
     };
 
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
             if (!$.data(this, "plugin_" + pluginName)) {
